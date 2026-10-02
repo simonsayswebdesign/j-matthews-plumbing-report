@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your Website &amp; Google Setup - J Matthews Plumbing &amp; Gas | Simon Says Web Design</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8f9fc;--card:#fff;--ink:#1a1d23;--muted:#6b7280;--line:#e5e7eb;--yellow:#F0E030;--yellow-d:#c9bb10;--green:#059669;--green-bg:#ecfdf5;--blue:#3b82f6;--blue-bg:#eff6ff;--amber:#b45309;--amber-bg:#fffbeb;--r:16px;--shadow:0 4px 24px rgba(0,0,0,.06)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+/* hero */
+.hero{position:relative;background:#111 url('van.jpg') center/cover no-repeat;color:#fff;padding:72px 0 56px;text-align:center;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,17,17,.82),rgba(17,17,17,.94))}
+.hero .container{position:relative}
+.hero img.logo{height:64px;width:auto;border-radius:6px;margin-bottom:18px}
+.badge{display:inline-block;background:rgba(240,224,48,.15);color:var(--yellow);padding:6px 16px;border-radius:999px;font-size:.8rem;font-weight:700;margin-bottom:14px;border:1px solid rgba(240,224,48,.35)}
+.hero h1{font-size:clamp(1.8rem,4.2vw,3rem);font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.hero p{color:rgba(255,255,255,.75);font-size:1.02rem;margin:14px auto 0;max-width:640px}
+.meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.meta span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#e5e7eb;padding:5px 12px;border-radius:999px;font-size:.78rem;font-weight:600}
+.actions{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-size:.88rem;font-weight:700;text-decoration:none;border:1px solid transparent;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.btn--yellow{background:var(--yellow);color:#111}
+.btn--ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.2)}
+.btn--ghost:hover{background:rgba(255,255,255,.16)}
+/* sections */
+.section{padding:44px 0 8px}
+.section h2{font-size:1.45rem;font-weight:800;letter-spacing:-.02em;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.section .lead{color:var(--muted);margin-bottom:22px;max-width:760px}
+.num{background:var(--ink);color:var(--yellow);width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:800;flex-shrink:0}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.09);border-color:#d1d5db}
+.card h3{font-size:1.02rem;font-weight:700;margin-bottom:6px}
+.card p,.card li{font-size:.9rem;color:#374151}
+.card ul{padding-left:18px;margin-top:6px}
+.card li{margin:4px 0}
+.card .grow{flex:1}
+.stat .label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--muted)}
+.stat .value{font-size:2rem;font-weight:900;line-height:1.1;margin-top:4px}
+.stat .sub{font-size:.82rem;color:var(--muted);margin-top:4px}
+.card--yellow{border-left:5px solid var(--yellow-d)}
+.card--green{border-left:5px solid var(--green);background:var(--green-bg)}
+.card--blue{border-left:5px solid var(--blue);background:var(--blue-bg)}
+.card--amber{border-left:5px solid var(--amber);background:var(--amber-bg)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.pill{display:inline-block;padding:5px 12px;border-radius:999px;font-size:.8rem;font-weight:600;background:#f3f4f6;border:1px solid var(--line);text-decoration:none;transition:background .2s,border-color .2s}
+a.pill:hover{background:var(--yellow);border-color:var(--yellow-d)}
+/* table */
+.table-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:620px}
+th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#111;color:#fff;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
+tr:last-child td{border-bottom:0}
+tbody tr{transition:background .2s}
+tbody tr:hover{background:#fefce8}
+td.before{color:var(--muted)}
+td.after{font-weight:600}
+/* steps */
+.steps{counter-reset:s;list-style:none;margin-top:10px}
+.steps li{counter-increment:s;position:relative;padding-left:36px;margin:10px 0;font-size:.9rem;color:#374151}
+.steps li:before{content:counter(s);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--yellow);color:#111;font-weight:800;font-size:.75rem;display:flex;align-items:center;justify-content:center}
+.howto h3{display:flex;align-items:center;gap:10px}
+.icon{width:38px;height:38px;border-radius:10px;background:#111;color:var(--yellow);display:inline-flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.note{font-size:.85rem;color:var(--muted);margin-top:10px}
+code{background:#f3f4f6;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:.85em}
+.footer{margin-top:48px;background:#111;color:#cbd5e1;padding:36px 0;text-align:center;font-size:.9rem}
+.footer strong{color:#fff}
+.footer a{color:var(--yellow);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+/* reveal animation */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.hero .reveal{transition-duration:.9s}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.card:hover,.btn:hover{transform:none}}
+@media (max-width:860px){.grid-3,.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.hero{padding:56px 0 44px}.section{padding-top:36px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <img class="logo reveal" src="logo.webp" alt="J Matthews Plumbing & Gas Louth logo" width="114" height="64">
+    <div class="reveal"><span class="badge">3-month trial &middot; set up 2 October 2026</span></div>
+    <h1 class="reveal">Your new website &amp; Google setup</h1>
+    <p class="reveal">Hi Josh, here&rsquo;s everything I&rsquo;ve done for J Matthews Plumbing &amp; Gas, and how you can see for yourself how many people are finding you and getting in touch.</p>
+    <div class="meta reveal"><span>Website live</span><span>Google profile updated</span><span>Search Console connected</span><span>Enquiry tracking on</span></div>
+    <div class="actions reveal">
+      <a class="btn btn--yellow" href="https://jmatthewsplumbing.co.uk" target="_blank" rel="noopener">Visit your website &rarr;</a>
+      <a class="btn btn--ghost" href="https://www.google.com/search?q=J+Matthews+Plumbing+%26+Gas+Louth" target="_blank" rel="noopener">See your Google listing</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="section">
+    <div class="grid-4">
+      <div class="card stat card--yellow reveal"><div class="label">Website pages</div><div class="value">15</div><div class="sub">Home, 8 services, 5 towns and a privacy page</div></div>
+      <div class="card stat card--green reveal"><div class="label">Google SEO score</div><div class="value" style="color:var(--green)">100</div><div class="sub">Google Lighthouse SEO check</div></div>
+      <div class="card stat card--blue reveal"><div class="label">Speed score</div><div class="value" style="color:var(--blue)">94</div><div class="sub">On mobile, up from 73</div></div>
+      <div class="card stat card--yellow reveal"><div class="label">Areas covered</div><div class="value">6</div><div class="sub">Louth plus 5 nearby towns</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="reveal"><span class="num">1</span>Your website</h2>
+    <p class="lead reveal">Your site is live on your own domain, <strong>jmatthewsplumbing.co.uk</strong>, with HTTPS. It works on phones and makes it easy for customers to call or WhatsApp you from any page.</p>
+    <div class="grid-2">
+      <div class="card reveal">
+        <h3>A page for every service</h3>
+        <p class="grow">Each service has its own page, so Google can show the right one when someone searches for that job.</p>
+        <div class="pills">
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/boiler-repair-louth" target="_blank" rel="noopener">Boiler Repair</a>
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/boiler-installation-louth" target="_blank" rel="noopener">Boiler Installation</a>
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/boiler-servicing-louth" target="_blank" rel="noopener">Boiler Service</a>
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/central-heating-louth" target="_blank" rel="noopener">Central Heating</a>
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/bathroom-installation-louth" target="_blank" rel="noopener">Bathroom Installation</a>
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/hot-water-cylinders-louth" target="_blank" rel="noopener">Hot Water Cylinders</a>
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/general-plumbing-louth" target="_blank" rel="noopener">Leaks &amp; General Plumbing</a>
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/emergency-plumber-louth" target="_blank" rel="noopener">Emergency Plumber</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <h3>A page for every town you cover</h3>
+        <p class="grow">These help you show up when people search for a plumber or gas engineer in their own town, not just Louth.</p>
+        <div class="pills">
+          <a class="pill" href="https://jmatthewsplumbing.co.uk" target="_blank" rel="noopener">Louth</a>
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/plumber-mablethorpe" target="_blank" rel="noopener">Mablethorpe</a>
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/plumber-alford" target="_blank" rel="noopener">Alford</a>
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/plumber-horncastle" target="_blank" rel="noopener">Horncastle</a>
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/plumber-market-rasen" target="_blank" rel="noopener">Market Rasen</a>
+          <a class="pill" href="https://jmatthewsplumbing.co.uk/plumber-binbrook" target="_blank" rel="noopener">Binbrook</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <h3>Built to win trust</h3>
+        <ul class="grow">
+          <li>Your Gas Safe registration (970625) shown on every page</li>
+          <li>Your real Google reviews and your 4.7&#9733; rating</li>
+          <li>Your own work photos: boilers, cylinders and bathrooms</li>
+          <li>Common questions answered on every page</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3>Set up properly for Google</h3>
+        <ul class="grow">
+          <li>Every page has its own title and description for Google</li>
+          <li>Business details coded in so Google understands who you are and where you work</li>
+          <li>Fast loading, with photos compressed for phones</li>
+          <li>Privacy &amp; cookie policy and a cookie banner, as UK law requires</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="reveal"><span class="num">2</span>Your Google Business Profile</h2>
+    <p class="lead reveal">Your Google listing is what shows on Google Maps and in the box on the right of Google search. I&rsquo;ve brought it up to date so it matches your website.</p>
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th>What</th><th>Before</th><th>Now</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Website</strong></td><td class="before">None</td><td class="after">jmatthewsplumbing.co.uk, with a Website button on your listing</td></tr>
+          <tr><td><strong>Main category</strong></td><td class="before">Gas engineer</td><td class="after">Plumber, the most-searched term. Gas engineer is kept as an extra category</td></tr>
+          <tr><td><strong>Other categories</strong></td><td class="before">Included &ldquo;Plumbers&rsquo; merchant&rdquo; and &ldquo;Boiler supplier&rdquo;, which are for shops</td><td class="after">Gas engineer, Bathroom Renovator, Central Heating Service, Gas installation service</td></tr>
+          <tr><td><strong>Areas served</strong></td><td class="before">Louth only</td><td class="after">Louth, Mablethorpe, Alford, Horncastle, Market Rasen and Binbrook</td></tr>
+          <tr><td><strong>Services</strong></td><td class="before">7 vague entries, such as &ldquo;Gas&rdquo;</td><td class="after">14 clear services, matching your website pages, with descriptions</td></tr>
+          <tr><td><strong>Description</strong></td><td class="before">Short, boilers only</td><td class="after">Covers every service, your Gas Safe number, weekend callouts and every town</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="reveal"><span class="num">3</span>Google tracking, connected behind the scenes</h2>
+    <div class="grid-3">
+      <div class="card reveal">
+        <h3>Google Search Console</h3>
+        <p class="grow">Tells Google your website exists, sends it a list of every page, and shows which searches you appear for.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Google Analytics</h3>
+        <p class="grow">Counts how many people visit your site, which pages they look at, and where they found you.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Enquiry tracking</h3>
+        <p class="grow">Every time someone taps <strong>Call</strong> or <strong>WhatsApp</strong> on your website, it&rsquo;s recorded as an enquiry, along with the page they were on.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tracking">
+    <h2 class="reveal"><span class="num">4</span>How to track your traffic &amp; enquiries</h2>
+    <p class="lead reveal">You can check these yourself whenever you like, on your phone or a computer. I&rsquo;ll also send you a simple report each month during the trial.</p>
+
+    <div class="grid-2">
+      <div class="card howto card--yellow reveal">
+        <h3><span class="icon">&#9873;</span>Your Google listing (calls, directions, website clicks)</h3>
+        <p>This is the quickest one to check, and it&rsquo;s where most of your calls come from.</p>
+        <ol class="steps grow">
+          <li>Make sure you&rsquo;re signed in to the Google account you use for your Business Profile.</li>
+          <li>Search Google for <code>J Matthews Plumbing &amp; Gas Louth</code>, or open the <strong>Google Maps</strong> app and tap your profile picture, then <strong>Your Business Profiles</strong>.</li>
+          <li>Tap <strong>Performance</strong>.</li>
+          <li>You&rsquo;ll see <strong>calls</strong> from your listing, <strong>website clicks</strong>, <strong>direction requests</strong>, how many people <strong>viewed</strong> your profile, and the <strong>searches</strong> people used to find you.</li>
+        </ol>
+        <p class="note">Change the date range at the top to compare months.</p>
+      </div>
+
+      <div class="card howto card--blue reveal">
+        <h3><span class="icon">&#128200;</span>Your website (visitors &amp; enquiries)</h3>
+        <p>I&rsquo;ll give you view-only access to Google Analytics using the same Google account. You&rsquo;ll get an email invite.</p>
+        <ol class="steps grow">
+          <li>Go to <strong>analytics.google.com</strong>, or download the free <strong>Google Analytics</strong> app.</li>
+          <li><strong>Home</strong> shows how many people visited your site.</li>
+          <li>For enquiries, go to <strong>Reports &rarr; Engagement &rarr; Key events</strong>. The event called <code>qualify_lead</code> is your enquiries: each one is someone tapping Call or WhatsApp on your website.</li>
+          <li><strong>Reports &rarr; Engagement &rarr; Pages</strong> shows which pages people look at most.</li>
+          <li><strong>Reports &rarr; Realtime</strong> shows who&rsquo;s on your site right now.</li>
+        </ol>
+        <p class="note">New data can take a day to appear in the reports.</p>
+      </div>
+
+      <div class="card howto card--green reveal">
+        <h3><span class="icon">&#128269;</span>What people search to find you</h3>
+        <p>Google Search Console shows the searches your website appears for, such as &ldquo;boiler repair Louth&rdquo;. I&rsquo;ll give you access to this too.</p>
+        <ol class="steps grow">
+          <li>Go to <strong>search.google.com/search-console</strong>.</li>
+          <li>Open <strong>Performance</strong>.</li>
+          <li><strong>Queries</strong> lists the searches. <strong>Clicks</strong> is how many people came to your site from each one.</li>
+        </ol>
+        <p class="note">A brand-new site usually takes a few weeks to start appearing. These numbers grow over the trial.</p>
+      </div>
+
+      <div class="card howto card--amber reveal">
+        <h3><span class="icon">&#9742;</span>Help me measure it properly</h3>
+        <p class="grow">A tap on Call isn&rsquo;t always a booked job. Some people tap and change their mind, and some ring you after reading your site without tapping anything. If you jot down roughly how many new customers say they found you on Google or your website, we&rsquo;ll get a true picture of what the trial is bringing in.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="reveal"><span class="num">5</span>How you can help it grow</h2>
+    <div class="grid-3">
+      <div class="card reveal">
+        <h3>Ask for Google reviews</h3>
+        <p class="grow">Reviews are the biggest thing that pushes you up Google Maps. After each job, send the customer your review link (on your listing, tap <strong>Ask for reviews</strong>). Reviews that mention the job and town, like &ldquo;new boiler in Horncastle&rdquo;, help most.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Send me job photos</h3>
+        <p class="grow">Before and after photos, especially from Mablethorpe, Alford, Horncastle, Market Rasen and Binbrook, make the town pages stronger. I can add them to the website and your Google listing.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Tell me what&rsquo;s changed</h3>
+        <p class="grow">New services, new areas, different hours or a new phone number: let me know and I&rsquo;ll update the website and Google together so they always match.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>Prepared by <strong>Simon Says Web Design</strong></p>
+    <p style="margin-top:6px">Any questions, just get in touch: <a href="mailto:hello@simonsayswebdesign.com">hello@simonsayswebdesign.com</a> &middot; <a href="https://simonsayswebdesign.com" target="_blank" rel="noopener">simonsayswebdesign.com</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        var sibs=[].slice.call(en.target.parentNode.children).filter(function(c){return c.classList.contains('reveal')});
+        en.target.style.transitionDelay=Math.min(sibs.indexOf(en.target),5)*80+'ms';
+        en.target.classList.add('in');io.unobserve(en.target);
+      }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
